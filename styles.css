@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:ital,wght@1,300&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF)
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.score {
+    background-color: blue;
+}
+
+#score {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 15px;
+
+    color: greenyellow;
+    background-color: black;
+    
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-family: 'Titan One', cursive;
+
+}
+
+#restart {
+    position: absolute;
+    
+    margin-left: 40%;
+    margin-top: 100px;
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 1000px;
+    border: 3px solid black;
+    font-family: 'Titan One', cursive;
+    font-size: 30px;
+    color: greenyellow;
+    background-color: black;
+
+    cursor: pointer;
+}
+
+#restart:hover {
+    color: yellow;
+}
+
+#gameOver {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 100px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
